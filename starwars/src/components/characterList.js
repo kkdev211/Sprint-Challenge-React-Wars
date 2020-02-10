@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 // 2. Axios import
 import axios from "axios";
 import CharacterCard from "./characterCard";
+import { Container, Row } from "reactstrap";
 
 // 3. Set up components with empty div return
 const CharacterList = () => {
@@ -26,11 +27,14 @@ const CharacterList = () => {
 
   console.log("initial render of characters", characters);
   return (
-    <div>
+    <Container>
+        <Row>
       {characters.map(character => (
         <CharacterCard key={character.url} character={character} />
       ))}
-    </div>
+      </Row>
+
+    </Container>
   );
 };
 

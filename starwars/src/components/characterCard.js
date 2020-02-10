@@ -1,12 +1,20 @@
 import React from "react";
+import { Card, CardHeader, CardBody, CardText, Col } from "reactstrap";
 
 
 const CharacterCard = ({ character }) => {
 
     return (
-        <div className="character-list">
-          <h2>Name: {character.name}</h2>
-        </div>
+        <Col xs="6" md="4" xl="3">
+        {/* <div className="character-list"> */}
+        <Card>
+          <CardHeader>Name: {character.name}</CardHeader>
+           <CardBody> 
+               <CardText>Birth Year: {character.birth_year}</CardText>
+           </CardBody>
+         </Card>
+         <br/>
+        </Col>
       );
     };
     
