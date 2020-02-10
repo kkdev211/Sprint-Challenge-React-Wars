@@ -11,6 +11,8 @@ const CharacterCard = ({ character }) => {
           <CardHeader>Name: {character.name}</CardHeader>
            <CardBody> 
                <CardText>Birth Year: {character.birth_year}</CardText>
+               <CardText>Height: {character.height}</CardText>
+               <CardText>Mass: {character.mass}</CardText>
            </CardBody>
          </Card>
          <br/>
